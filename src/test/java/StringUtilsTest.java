@@ -10,14 +10,18 @@ public class StringUtilsTest {
     private double source;
     private String expected;
     private String s;
+    private String testString;
+    private String[] testArray;
 
     @Before
     public void setUp(){
         source = 3.1415;
         expected = "3.1415";
         s = "Test";
-
+        testString =  "T:E:S:T";
+        testArray = new String[] {"T", "E", "S", "T"};
     }
+
     @Test
     public void testFromDouble() {
 //        double source = 3.1415;
@@ -51,5 +55,11 @@ public class StringUtilsTest {
     @Test(expected = NumberFormatException.class)
     public void testException(){
         StringUtils.toDouble(s);
+    }
+
+    @Test
+    public void TestArray(){
+        assertArrayEquals("Wrong array", testArray, StringUtils.toArray(testString, ':'));
+        assertNull(StringUtils.toArray(null, ':'));
     }
 }
