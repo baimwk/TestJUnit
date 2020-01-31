@@ -18,7 +18,7 @@ public class CalculatorParameterizedTest {
     }
 
     @Parameterized.Parameters(name = "{index}:sumOf({0}+{1})={2}") //{index} - индекс теста. пояснение к тестам
-    public static Iterable<Object[]> dataForTest() {
+    public static Iterable<Object[]> dataForTest() { //интерфейс Iterator
         return Arrays.asList(new Object[][]{
                 {1, 1, 2},
                 {2, 6, 8},

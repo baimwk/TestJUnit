@@ -15,8 +15,8 @@ public class StringUtilsParameterizedTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters(name = "{index}:{0}={1})")
-    public static Iterable<Object[]> dataForTest(){
+    @Parameterized.Parameters(name = "{index}:{0}={1})") //{index} - индекс теста. пояснение к тестам
+    public static Iterable<Object[]> dataForTest(){ //интерфейс Iterator
         return Arrays.asList(new Object[][]{
                 {1.0, "1.0"},
                 {2.13, "2.13"},
