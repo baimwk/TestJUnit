@@ -35,6 +35,20 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
+        <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc6 -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc</artifactId>
+            <version>14</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
+        </dependency>
+
+
+
+
+
     </dependencies>
 
     <build>
